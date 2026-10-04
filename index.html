@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>برای کوچولو ❤️</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;font-family:Tahoma,Arial,sans-serif;
+background:radial-gradient(circle at 20% 10%,#ffdce5,transparent 30%),linear-gradient(135deg,#fff4f6,#ffd1dc 50%,#f8a8b9);
+color:#6d2637;overflow-x:hidden}
+.petals{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.petal{position:absolute;top:-30px;font-size:24px;animation:fall linear infinite;opacity:.72}
+@keyframes fall{to{transform:translateY(110vh) rotate(360deg);opacity:.08}}
+.wrap{max-width:720px;margin:auto;padding:34px 18px 55px;position:relative;z-index:1}
+.card{background:rgba(255,250,251,.92);border:1px solid #fff;border-radius:30px;padding:34px 24px;
+box-shadow:0 20px 60px #9e314333;text-align:center;position:relative}
+.badge{display:inline-block;background:#fff0f3;border:1px solid #f6b5c2;border-radius:999px;padding:8px 16px;font-size:13px}
+h1{font-size:44px;margin:20px 0 4px;color:#b52d4c}
+.subtitle{font-size:18px;color:#9b4055;margin-bottom:26px}
+.heart{font-size:52px;animation:pulse 1.4s infinite}
+@keyframes pulse{50%{transform:scale(1.12)}}
+.message{font-size:17px;line-height:2.15;margin:18px auto;max-width:570px}
+button{border:0;background:linear-gradient(135deg,#c83255,#ee718d);color:white;padding:14px 24px;
+border-radius:999px;font-size:15px;cursor:pointer;box-shadow:0 9px 22px #c8325540;margin-top:10px}
+button:active{transform:scale(.98)}
+.hidden{display:none}
+.secret{margin-top:25px;padding:22px;background:#fff3f5;border-radius:22px;border:1px dashed #e99aaa;line-height:2.15}
+.divider{margin:28px auto 18px;color:#d05a73;font-size:22px;letter-spacing:8px}
+.footer{margin-top:24px;font-size:13px;color:#9a6370}
+.flower{font-size:30px;letter-spacing:8px}
+.languages{margin-top:25px;padding:20px 12px;background:linear-gradient(145deg,#fff0f3,#ffe4ea);
+border-radius:24px;border:1px solid #f4b3c0}
+.lang{opacity:0;transform:translateY(12px);animation:show .7s forwards;margin:13px 0;font-size:18px;font-weight:bold}
+.lang:nth-child(1){animation-delay:.1s}.lang:nth-child(2){animation-delay:.4s}.lang:nth-child(3){animation-delay:.7s}
+.lang:nth-child(4){animation-delay:1s}.lang:nth-child(5){animation-delay:1.3s}.lang:nth-child(6){animation-delay:1.6s}
+@keyframes show{to{opacity:1;transform:translateY(0)}}
+.ending{font-size:27px;margin-top:22px;animation:pulse 1.5s infinite}
+</style>
+</head>
+<body>
+<div class="petals" id="petals"></div>
+<div class="wrap">
+<div class="card">
+<div class="badge">یک تبریک کوچیک، برای یه آدم خاص</div>
+<div class="heart">❤️</div>
+<h1>کوچولو</h1>
+<div class="subtitle">روز دختر مبارک 🌷</div>
+<div class="flower">🌸 🌹 🌷</div>
+
+<p class="message">
+کوچولو،<br>
+امروز فقط یه بهونه‌ست برای اینکه بهت بگم امیدوارم همیشه حالت خوب باشه
+و روزات پر از اتفاقای قشنگ باشه.<br>
+شاید نتونم همیشه درست حرفمو بزنم، ولی بودنت برام باارزشه.<br>
+روز دختر مبارک گوگولی 🌷
+</p>
+
+<button id="btn1">یه چیز دیگه هم هست... 💌</button>
+
+<div id="secret" class="secret hidden">
+خب... اگه تا اینجا اومدی، یه چیز دیگه هم باید بهت بگم...<br>
+شاید همیشه نتونم درست بیانش کنم، ولی بودنِ تو توی زندگیم برای من خیلی باارزشه.<br>
+خوشحالم که تو شدی یکی از آدمای مهم زندگیم،
+و امیدوارم همیشه همون گوگولیِ دوست‌داشتنی خودت بمونی.<br><br>
+<strong>دوستت دارم، کوچولو. ❤️🌷</strong>
+<br>
+<button id="btn2">آخرین سورپرایز... ❤️</button>
+</div>
+
+<div id="languages" class="languages hidden">
+<div class="lang">🇮🇷 دوستت دارم ❤️</div>
+<div class="lang">🇬🇧 I love you ❤️</div>
+<div class="lang">🇫🇷 Je t’aime ❤️</div>
+<div class="lang">🇯🇵 愛してる ❤️</div>
+<div class="lang">🇰🇷 사랑해 ❤️</div>
+<div class="lang">🇪🇸 Te amo ❤️</div>
+<div class="ending">❤️ 🌸 ❤️ 🌷 ❤️</div>
+</div>
+
+<div class="divider">♥ ✿ ♥</div>
+<div class="footer">برای تو، با یه عالمه عشق ❤️</div>
+</div>
+</div>
+
+<script>
+const petals=document.getElementById('petals');
+for(let i=0;i<22;i++){
+ const p=document.createElement('div');p.className='petal';
+ p.textContent=['🌸','🌷','❤️','✿'][i%4];
+ p.style.left=Math.random()*100+'%';
+ p.style.animationDuration=(6+Math.random()*8)+'s';
+ p.style.animationDelay=(-Math.random()*10)+'s';
+ petals.appendChild(p);
+}
+document.getElementById('btn1').onclick=()=>{
+ document.getElementById('secret').classList.remove('hidden');
+ document.getElementById('btn1').classList.add('hidden');
+};
+document.getElementById('btn2').onclick=()=>{
+ document.getElementById('languages').classList.remove('hidden');
+ document.getElementById('btn2').classList.add('hidden');
+ window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'});
+};
+</script>
+</body>
+</html>
